@@ -1,0 +1,89 @@
+@import '../mixins/input';
+
+.tipCalculator {
+   background-color: $white;
+   border-radius: 20px;
+   color: $very-dark-cyan;
+   display: flex;
+   min-height: 55vh;
+   width: 60vw;
+   margin-top: 4rem;
+
+   box-shadow: 0px 15px 20px 2px rgba(0, 0, 0, 0.1);
+
+   @media (max-width: 800px) {
+      width: 100%;
+      flex-direction: column;
+   }
+
+   &__form {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+   }
+
+   &__billInput {
+      @include input;
+      background: url('../images/icon-dollar.svg') no-repeat 1rem 1rem;
+      background-color: $very-light-grayish-cyan;
+
+      @media (max-width: 800px) {
+         margin-bottom: 2rem;
+      }
+   }
+
+   &__optionsContainer {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+
+      @media (max-width: 800px) {
+         margin-bottom: 2rem;
+      }
+   }
+
+   &__tipValue,
+   &__tipValue--custom {
+      width: calc((100% / 3) - 10px);
+      min-height: 7vh;
+      padding: 0;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $very-light-grayish-cyan;
+      background-color: $very-dark-cyan;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.1s;
+
+      @media (max-width: 800px) {
+         width: calc((100% / 2) - 10px);
+         margin: 0;
+      }
+
+      &:not(.tipCalculator__tipValue--custom):hover {
+         color: $very-dark-cyan;
+         background-color: $strong-cyan;
+      }
+
+      &--custom {
+         cursor: auto;
+         background-color: $very-light-grayish-cyan;
+         caret-color: $very-dark-cyan;
+         color: $very-dark-cyan;
+
+         &:focus {
+            outline: none;
+            border: 2px solid $strong-cyan;
+         }
+      }
+   }
+
+   &__numberOfPeople {
+      @include input;
+      background: url('../images/icon-person.svg') no-repeat 1rem 1rem;
+      background-color: $very-light-grayish-cyan;
+   }
+}

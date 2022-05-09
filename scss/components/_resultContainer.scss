@@ -1,0 +1,71 @@
+.resultContainer {
+   background-color: $very-dark-cyan;
+   color: $light-grayish-cyan;
+   padding: 2rem;
+   border-radius: 15px;
+   width: 30vw;
+   margin: 2rem;
+   position: relative;
+
+   @media (max-width: 800px) {
+      width: calc(100% - 4rem);
+      position: static;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   &__perPerson {
+      color: $dark-grayish-cyan;
+   }
+
+   &__tipAmountContainer,
+   &__tipTotalContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__amountValue,
+   &__totalValue {
+      color: $strong-cyan;
+      font-size: 2.3rem;
+      font-weight: 700;
+   }
+
+   &__tipAmountContainer {
+      margin-bottom: 2rem;
+   }
+
+   &__description {
+      color: $very-light-grayish-cyan;
+   }
+
+   .resetButton {
+      position: absolute;
+      bottom: 2rem;
+      justify-self: flex-end;
+      width: calc(100% - 4rem);
+      min-height: 7vh;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      color: $very-dark-cyan;
+      background-color: $strong-cyan;
+      border-radius: 5px;
+      letter-spacing: 2px;
+
+      @media (max-width: 800px) {
+         position: static;
+         width: 100%;
+         margin-top: 2rem;
+      }
+
+      &:hover {
+         background-color: $light-grayish-cyan;
+      }
+   }
+}

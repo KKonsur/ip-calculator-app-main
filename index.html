@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+      <title>Frontend Mentor | Tip calculator app</title>
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <div class="container">
+         <img class="logo" src="images/logo.svg" alt="" srcset="" />
+         <div class="tipCalculator">
+            <section class="tipCalculator__form">
+               <div class="tipCalculator__billContainer">
+                  <p>Bill</p>
+                  <input value="0" type="text" class="tipCalculator__billInput" />
+               </div>
+               <div class="tipCalculator__tipContainer">
+                  <p>Select tip %</p>
+                  <div class="tipCalculator__optionsContainer">
+                     <button value="5" class="tipCalculator__tipValue">5%</button>
+                     <button value="10" class="tipCalculator__tipValue">10%</button>
+                     <button value="15" class="tipCalculator__tipValue">15%</button>
+                     <button value="25" class="tipCalculator__tipValue">25%</button>
+                     <button value="50" class="tipCalculator__tipValue">50%</button>
+                     <input class="tipCalculator__tipValue--custom" type="text" placeholder="Custom" />
+                  </div>
+               </div>
+               <div class="tipCalculator__peopleContainer">
+                  <p>Number of people</p>
+                  <input value="1" type="text" class="tipCalculator__numberOfPeople" />
+               </div>
+            </section>
+            <section class="resultContainer">
+               <div class="resultContainer__tipAmountContainer">
+                  <div class="resultContainer__descriptionBox">
+                     <p>Tip amount</p>
+                     <span class="resultContainer__perPerson">/ person</span>
+                  </div>
+                  <span class="resultContainer__amountValue">$0.00</span>
+               </div>
+               <div class="resultContainer__tipTotalContainer">
+                  <div class="resultContainer__descriptionBox">
+                     <p>Total</p>
+                     <span class="resultContainer__perPerson">/ person</span>
+                  </div>
+                  <span class="resultContainer__totalValue">$0.00</span>
+               </div>
+               <button class="resetButton" type="reset">reset</button>
+            </section>
+         </div>
+      </div>
+      <script src="main.js"></script>
+   </body>
+</html>
